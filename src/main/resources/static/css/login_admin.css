@@ -1,0 +1,38 @@
+body{
+	background-image: url("/../../images/mandiri.jpg");
+
+  /* Full height */
+  height: 100%; 
+  backdrop-filter: blur(5px);
+
+  /* Center and scale the image nicely */
+  /*background-position: center;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+    .card-custom{
+        background-color: #ebf2fa;
+    }  
+    
+    .form-label{
+        font-weight: normal;
+        float: left;
+    }
+
+    .btn-color{
+        background-color: #0e1c36;
+        color: #fff;
+      }
+
+/* .gradient-custom {
+    //fallback for old browsers
+    background: #6a11cb;
+    
+    //Chrome 10-25, Safari 5.1-6
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    //W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }  */
+    

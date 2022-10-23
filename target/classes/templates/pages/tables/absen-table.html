@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Beranda Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png"/>
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/2.0.2/css/searchPanes.bootstrap5.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.4.0/css/select.bootstrap5.min.css">
+
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+
+  <!--    <script>-->
+  <!--    $(document).ready(function () {-->
+  <!--    $('tableizin').DataTable();-->
+  <!--});-->
+  <!--</script>-->
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <!-- End custom js for this page-->
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+
+</head>
+
+<body>
+<div class="container-scroller">
+  <!-- partial:../../partials/_navbar.html -->
+  <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+      <div class="me-3">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+      <div>
+        <a class="navbar-brand brand-logo" href="/">
+          <img src="../../images/DDP.png" alt="logo" width="1500px" height="1500px"/>
+        </a>
+      </div>
+    </div>
+    <div class="navbar-menu-wrapper d-flex align-items-top">
+      <ul class="navbar-nav">
+        <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+          <h1 class="welcome-text">Selamat Datang, <span class="text-black fw-bold">Admin!</span></h1>
+          <h3 class="welcome-sub-text">Silahkan cek data dibawah ini </h3>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item d-none d-lg-block">
+          <div class="input-group date datepicker navbar-date-picker">
+            <div id="tanggalwaktu"></div>
+          </div>
+        </li>
+        <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+          <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+            <img class="img-xs rounded-circle" src="../../images/faces/face8.jpg" alt="Profile image"> </a>
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+            <div class="dropdown-header text-center">
+              <img class="img-md rounded-circle" src="../../images/faces/face8.jpg" alt="Profile image">
+              <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
+              <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
+            </div>
+            <a class="dropdown-item"><i
+                    class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile
+              <span class="badge badge-pill badge-danger">1</span></a>
+            <a class="dropdown-item" th:href="@{/logout}"><i class="dropdown-item-icon mdi mdi-power text-primary me-2" ></i>Sign
+              Out</a>
+          </div>
+        </li>
+      </ul>
+      <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+              data-bs-toggle="offcanvas">
+        <span class="mdi mdi-menu"></span>
+      </button>
+    </div>
+  </nav>
+  <!-- partial -->
+  <div class="container-fluid page-body-wrapper">
+    <!-- partial:../../partials/_settings-panel.html -->
+    <div id="right-sidebar" class="settings-panel">
+      <div class="tab-content" id="setting-content">
+        <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel"
+             aria-labelledby="todo-section">
+          <!-- <a ada isinya td></a> -->
+        </div>
+        <!-- <a ada isinya td></a> -->
+        <!-- chat tab ends -->
+      </div>
+    </div>
+    <!-- partial -->
+    <!-- partial:../../partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">
+            <i class="mdi mdi-grid-large menu-icon"></i>
+            <span class="menu-title">Beranda</span>
+          </a>
+        </li>
+        <li class="nav-item nav-category">Form and Data</li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false"
+             aria-controls="form-elements">
+            <i class="menu-icon mdi mdi-account-multiple"></i>
+            <span class="menu-title">Form Register</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="form-elements">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"><a class="nav-link" href="/dashboard/form-register-karyawan">Register
+                Karyawan</a></li>
+              <li class="nav-item"><a class="nav-link" href="/dashboard/add/izin">Izin Karyawan</a></li>
+              <li class="nav-item"><a class="nav-link" href="/dashboard/add/admin">Register Admin</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false"
+             aria-controls="tables">
+            <i class="menu-icon mdi mdi-table"></i>
+            <span class="menu-title">Data</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="tables">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"><a class="nav-link" href="/dashboard/tabel_karyawan">Data Karyawan</a></li>
+              <li class="nav-item"><a class="nav-link" href="/dashboard/table-absen">Data Absen Karyawan</a></li>
+              <li class="nav-item"><a class="nav-link" href="/dashboard/izinkaryawan">Data Izin Karyawan</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- partial -->
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+
+                <div class="col-lg-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Daftar Absen Karyawan Digital Banking Delivery</h4>
+                      <p class="card-description">
+                        Digital Developer Program
+                      </p>
+                      <div class="table-responsive">
+                        <table id="tableizin" class="display" style="width:100%">
+                          <thead>
+                          <tr>
+                            <th>NIP</th>
+                            <th>Nama</th>
+                            <th>Jam Masuk</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr th:each="daftarabsens : ${daftarabsen}">
+                            <td th:text="${daftarabsens.nip}"></td>
+                            <td th:text="${daftarabsens.nama}"></td>
+                            <td th:text="${daftarabsens.jam_masuk}"></td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- content-wrapper ends -->
+              <!-- partial:../../partials/_footer.html -->
+              <footer class="footer" style="margin-top: 280px;">
+                <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                  <!-- <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span> -->
+                  <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+                </div>
+              </footer>
+              <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+          </div>
+          <!-- page-body-wrapper ends -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../../js/off-canvas.js"></script>
+<script src="../../js/hoverable-collapse.js"></script>
+<script src="../../js/template.js"></script>
+<script src="../../js/settings.js"></script>
+<script src="../../js/todolist.js"></script>
+<script src="../../js/currentTime.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/searchpanes/2.0.2/js/dataTables.searchPanes.min.js"></script>
+<script src="https://cdn.datatables.net/searchpanes/2.0.2/js/searchPanes.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/select/1.4.0/js/dataTables.select.min.js"></script>
+<script type="text/javascript" src="../../js/sort.js"></script>
+</body>
+</html>
+

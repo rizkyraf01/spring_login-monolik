@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Dashbord Admin</title>
+    <!-- plugins:css -->
+    <link href="../../vendors/feather/feather.css" rel="stylesheet">
+    <link href="../../vendors/mdi/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="../../vendors/ti-icons/css/themify-icons.css" rel="stylesheet">
+    <link href="../../vendors/typicons/typicons.css" rel="stylesheet">
+    <link href="../../vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="../../vendors/css/vendor.bundle.base.css" rel="stylesheet">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link href="../../css/vertical-layout-light/style.css" rel="stylesheet">
+    <!-- endinject -->
+    <link href="../../images/favicon.png" rel="shortcut icon"/>
+</head>
+
+<body>
+<div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+            <div class="me-3">
+                <button class="navbar-toggler navbar-toggler align-self-center" data-bs-toggle="minimize" type="button">
+                    <span class="icon-menu"></span>
+                </button>
+            </div>
+            <div>
+                <a class="navbar-brand brand-logo" href="../../index.html">
+                    <img alt="logo" height="1500px" src="../../images/DDP.png" width="1500px"/>
+                </a>
+            </div>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-top">
+            <ul class="navbar-nav">
+                <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+                    <h1 class="welcome-text">Welcome, <span class="text-black fw-bold">Admin!</span></h1>
+                    <h3 class="welcome-sub-text">Please check this tables below </h3>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item d-none d-lg-block">
+                    <div class="input-group date datepicker navbar-date-picker">
+                        <div id="tanggalwaktu"></div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+                    <a aria-expanded="false" class="nav-link" data-bs-toggle="dropdown" href="#" id="UserDropdown">
+                        <img alt="Profile image" class="img-xs rounded-circle" src="../../images/faces/face8.jpg"> </a>
+                    <div aria-labelledby="UserDropdown" class="dropdown-menu dropdown-menu-right navbar-dropdown">
+                        <div class="dropdown-header text-center">
+                            <img alt="Profile image" class="img-md rounded-circle" src="../../images/faces/face8.jpg">
+                            <p class="mb-1 mt-3 font-weight-semibold">My Admin</p>
+                            <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
+                        </div>
+                        <a class="dropdown-item"><i
+                                class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile
+                            <span class="badge badge-pill badge-danger">1</span></a>
+                        <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign
+                            Out</a>
+                    </div>
+                </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" data-bs-toggle="offcanvas"
+                    type="button">
+                <span class="mdi mdi-menu"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:../../partials/_settings-panel.html -->
+        <div class="settings-panel" id="right-sidebar">
+            <i class="settings-close ti-close"></i>
+            <div class="tab-content" id="setting-content">
+                <div aria-labelledby="todo-section" class="tab-pane fade show active scroll-wrapper" id="todo-section"
+                     role="tabpanel">
+                    <!-- <a ada isinya td></a> -->
+                </div>
+                <!-- <a ada isinya td></a> -->
+                <!-- chat tab ends -->
+            </div>
+        </div>
+        <!-- partial -->
+        <!-- partial:../../partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <i class="mdi mdi-grid-large menu-icon"></i>
+                        <span class="menu-title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="nav-item nav-category">Forms and Datas</li>
+                <li class="nav-item">
+                    <a aria-controls="form-elements" aria-expanded="false" class="nav-link" data-bs-toggle="collapse"
+                       href="#form-elements">
+                        <i class="menu-icon mdi mdi-account-multiple"></i>
+                        <span class="menu-title">Form Register</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="form-elements">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="/form-register-karyawan">Register
+                                Karyawan</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/add/izin">Izin Karyawan</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a aria-controls="tables" aria-expanded="false" class="nav-link" data-bs-toggle="collapse"
+                       href="#tables">
+                        <i class="menu-icon mdi mdi-table"></i>
+                        <span class="menu-title">Tables</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="tables">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="/tabel_karyawan">Table Karyawan</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/table-absen">Table Absen</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/table-absen_keluar">Table Absen Keluar</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="/izinkaryawan">Table Izin</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-lg-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <div class="col-lg-12 grid-margin stretch-card">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Tabel Absensi Pulang Karyawan Digital Delivery
+                                                Banking </h4>
+                                            <p class="card-description">
+                                                Digital Developer Program
+                                            </p>
+                                            <div class="table-responsive pt-3">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>
+                                                            NIP
+                                                        </th>
+                                                        <th>
+                                                            Nama
+                                                        </th>
+                                                        <th>
+                                                            Jam Pulang
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr th:each="daftarabsenskeluar : ${daftarabsenkeluar}">
+                                                        <td th:text="${daftarabsenskeluar.nip}"></td>
+                                                        <td th:text="${daftarabsenskeluar.nama}"></td>
+                                                        <td th:text="${daftarabsenskeluar.jam_keluar}"></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- content-wrapper ends -->
+                                <!-- partial:../../partials/_footer.html -->
+                                <footer class="footer" style="margin-top: 280px;">
+                                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                                        <!-- <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span> -->
+                                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+                                    </div>
+                                </footer>
+                                <!-- partial -->
+                            </div>
+                            <!-- main-panel ends -->
+                        </div>
+                        <!-- page-body-wrapper ends -->
+                    </div>
+                    <!-- container-scroller -->
+                    <!-- plugins:js -->
+                    <script src="../../vendors/js/vendor.bundle.base.js"></script>
+                    <!-- endinject -->
+                    <!-- Plugin js for this page -->
+                    <script src="vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+                    <!-- End plugin js for this page -->
+                    <!-- inject:js -->
+                    <script src="../../js/off-canvas.js"></script>
+                    <script src="../../js/hoverable-collapse.js"></script>
+                    <script src="../../js/template.js"></script>
+                    <script src="../../js/settings.js"></script>
+                    <script src="../../js/todolist.js"></script>
+                    <script src="../../js/currentTime.js"></script>
+                    <!-- endinject -->
+                    <!-- Custom js for this page-->
+                    <!-- End custom js for this page-->
+</body>
+</html>

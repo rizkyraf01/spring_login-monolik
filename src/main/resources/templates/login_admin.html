@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/../../css/login_admin.css">
+        <title></title>
+    </head>
+<body class="bg-image">
+    <section class="vh-100 gradient-custom">
+        <div class="container py-lg-4 h-100">
+          <div class="row d-flex justify-content-center h-100">
+            <div class="col-md-6 my-sm-4">
+                <div class="col-md-6 offset-md-3">
+                    <div th:if="${param.error}">
+                        <div class="alert alert-danger">Invalid Email and Password.</div>
+                    </div>
+                    <div th:if="${param.logout}">
+                        <div class="alert alert-success">You have been logged out.</div>
+                    </div>
+              <div class="card-custom  mt-md-4" style="border-radius: 1rem;">
+                
+                <div class="card-body text-center my-sm-2 mx-md-3">
+                
+                  <div class="my-md-3">
+                    <img src="/../../images/logo.png" width="150px">
+             
+                    <h5 class="mb-md-4 mt-xl-5 pb-0 font-weight-medium">Halo, <span class="text-black fw-bold"> Admin! </span></h5>
+                    
+                    <!-- <p class="text-dark-50 mb-5 mt-md-1 fw-bold">Masukkan NIP dan kata sandi akun anda</p> -->
+                          <form   method="post"
+                                  th:action="@{/login_admin}"
+                                  role="form">
+                    <div class="form-outline form-white mb-lg-4">
+                        <label for="username" class="form-label" >Email</label>
+                        <input type="email" id="username" name="username" placeholder="Masukkan Email" class="form-control" />
+                    </div>
+      
+                    <div class="form-outline form-white mb-lg-4">
+                        <label for="password" class="form-label" >Kata Sandi</label>
+                        <input type="password" id="password" name="password" placeholder="Masukkan kata sandi" class="form-control" />
+                    </div>
+
+                    <!-- <button class="btn btn-primary btn mt-md-2 mb-md-2" 
+                    class="btn btn-color"
+                    type="submit">Masuk</button> -->
+
+                    <div class="btn mt-md-2 mb-md-2">
+                      <button type="submit" class="btn btn-color"
+                        >Masuk</button>
+                    </div>
+
+                    <!-- <div>
+                      <p class="mt">Belum memiliki akun? <a href="#!" class="text-black-50 fw-bold">Registrasi</a>
+                      </p>
+                    </div> -->
+
+                  </div>
+                    </form>
+      
+                  <!-- <div>
+                    <p class="m-auto">Silahkan hubungi admin jika belum memiliki akun <a class="text-white-150 fw-bold"></a>
+                    </p>
+                  </div> -->
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+<footer>
+
+</footer>

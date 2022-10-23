@@ -1,0 +1,22 @@
+.gradient-custom-3 {
+    background-image: linear-gradient(to right top, #2651b3, #1f44aa, #1938a1, #142a97, 
+    #121c8d, #1c188b, #231389, #290d87, #36168d, 
+    #411f94, #4c279a, #562fa1);
+    }
+
+    .btn-color{
+        background-color: #0e1c36;
+        color: #fff;
+      }
+
+    .card{
+        background-color: #ebf2fa;
+    }  
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+      }
+    

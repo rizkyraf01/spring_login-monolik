@@ -1,0 +1,93 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../css/absen.css">
+    <title></title>
+</head>
+<body class="bg-image">
+<div class="row mt-3 mx-3" style="margin-top:25px ;">
+    <div class="col-md-3">
+        <div style="margin-top: 70%; margin-left: 10px;" class="text-center">
+            <i id="animationDemo" data-mdb-animation="slide-right" data-mdb-toggle="animation"
+               data-mdb-animation-reset="true" data-mdb-animation-start="onScroll"
+               data-mdb-animation-on-scroll="repeat" class="fas fa-3x fa-shipping-fast text-white"></i>
+            <h2 class="mt-3 text-white">Selamat Datang</h2>
+            <p class="white-text">Jangan lupa untuk absen hariannya ya...</p>
+        </div>
+        <div class="text-center">
+            <!-- <button type="submit" class="btn btn-white btn-rounded back-button">Go back</button> -->
+            <img src="../../images/loginkaryawan.png">
+        </div>
+    </div>
+    <div style="margin-top: 5%; margin-bottom: 5%;" class="col-md-9 justify-content-center">
+        <div class="card card-custom pb-4">
+            <div class="card-body mt-0 mx-5">
+                <div class="text-center mb-3 pb-2 mt-3">
+                    <h4 class="text-uppercase" style="color: #33373c ;">Absensi Karyawan</h4>
+                </div>
+                <div class="alert alert-primary" role="alert" th:text="${Success}" th:if="${Success}"></div>
+                <div class="alert alert-danger" role="alert" th:text="${Error}" th:if="${Error}"></div>
+                <form th:object="${addAbsensi}" method="post" th:action="@{/save/absen}" class="mb-0 card-custom">
+                    <div class="row mb-2">
+                        <div class="col">
+                            <div class="form-outline">
+                                <label class="form-label">NIP</label>
+                                <input type="text"  class="form-control input-custom" placeholder="Nomor Induk Pegawai" th:field="*{nip}" required/>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="form-outline">
+                                <label class="form-label" >Nama Lengkap</label>
+                                <input type="text"  class="form-control input-custom" placeholder="Nama"  th:field="*{nama}" required />
+
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="form-outline">
+                                <label class="form-label" >Jam Masuk</label>
+                                <input type="text" id="fullTime" name="fullTime"  class="form-control input-custom" th:field="*{jam_masuk}"  />
+
+                            </div>
+                        </div>
+
+<!--                        <div class="row mb-2">-->
+<!--                            <div class="form-outline">-->
+<!--                                <label class="form-label" for="form9Example4">Departemen</label>-->
+<!--                                <input type="text" id="form9Example4" class="form-control input-custom" placeholder="Nama Departemen" th:field="*{departement}" />-->
+
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="row mb-2">-->
+<!--                            <div class="form-outline">-->
+<!--                                <label class="form-label">Jabatan</label>-->
+<!--                                <input type="text"  class="form-control input-custom" placeholder="Isi Jabatan" th:field="*{jabatan}" />-->
+
+<!--                            </div>-->
+<!--                        </div>-->
+                    </div>
+            </div>
+
+            <div style="margin-left: 50%;"class="float-start" >
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-rounded"
+                >Kirim</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<script src="../../js/absen_time.js"></script>
+</body>
+</html>
